@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- ========================= section 1 ====================== -->
+    <div class="container">
+        <div class="row my-row align-items-center">
+            <div class="col-md col-lg mt-lg-1b fs-">
+                <!--  بخش متن -->
+                <h4 class="mb-4 mt-lg-0 fw-bold text-white">
+                    لورم ایپسوم متن ساختگی
+                </h4>
+                <h5 class="text-primary mb-3 mb-lg-4 mt-lg-4">
+                    MyWebsite.ir
+                </h5>
+                <p class="lh-lg mb-lg-5 text-white">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                    چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+                    بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است لورم
+                    ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                    با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
+                    روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                </p>
+            </div>
+            <!-- بخش تصویر -->
+            <div class="col-md col-lg-4 mt-sm-5">
+                <img src="{% static 'pictures/mention-77.png' %}" alt="" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+    <div class="mb-4"></div>
+    <!-- end section 1 -->
+
+    <!-- نوار جدا کننده -->
+    <div class="container">
+        <div class="row align-items-center text-center">
+            <div class="col line"></div>
+            <div class="col-3 col-lg-2 mx-auto">
+                <h3 class="text-white">راه های ارتباطی</h3>
+            </div>
+            <div class="col line"></div>
+        </div>
+    </div>
+    <div class="mb-4"></div>
+
+    <!-- ======================= section 2==================== -->
+    <div class="container">
+        <div class="row">
+            <!-- بخش کارت ها -->
+            <div class="col col-md-4 my-card ms-auto">
+                <div class="row">
+                    <!-- کارت اول ، تصویر و متن -->
+                    <div class="col">
+                        <img src="{% static 'pictures/sending-emails-81.png' %}" class="card-image" alt="" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-white">آدرس ایمیل</h1>
+                        <p class="text-white">
+                            ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                            صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                            سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-md-4 my-card me-auto">
+                <div class="row">
+                    <!-- کارت دوم ، تصویر و متن -->
+                    <div class="col">
+                        <img src="{% static 'pictures/notification-4.png' %}" class="card-image mt-1" alt="" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-white">تلفن تماس</h1>
+                        <p class="text-white">
+                            ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                            صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                            سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- بخش تصاویر لینک دار -->
+        <div class="row mt-5 align-items-center">
+            <div class="col-4 col-md-2 text-white mx-auto my-col">
+                <a href="https://github.com"><i class="bi bi-github"></i></a>
+            </div>
+            <div class="col-4 col-md-2 text-white mx-auto my-col">
+                <a href="https://google.com"><i class="bi bi-globe2"></i></a>
+            </div>
+            <div class="col-4 col-md-2 text-white mx-auto my-col">
+                <a href="https://gmail.com"><i class="bi bi-envelope-at"></i></a>
+            </div>
+            <div class="col-4 col-md-2 text-white mx-auto my-col">
+                <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>
+            </div>
+            <div class="col-4 col-md-2 text-white mx-auto my-col">
+                <a href="https://linkedin.com"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <div class="col-4 col-md-2 text-white mx-auto my-col">
+                <a href="https://telegram.org"><i class="bi bi-telegram"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end section 2 -->
+
+    <!-- ====================== section 3 ==================== -->
+    <section>
+        <div class="container" id="contactus">
+            <div class="row text-center"></div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    
+                    <!-- فرم ارسال پیام -->
+                    <form action="#contactus" method="post">
+                        {% csrf_token %}
+
+                        <!-- فرم اسم-->>
+                        <div class="mb-3">
+                            <label for="nameInput" class="form-label text-white">نام</label>
+                              <input type="text" class="form-control bg-light" name="name" id="nameInput" name="name" 
+                                placeholder="نام خود را وارد کنید" />
+                        </div>
+                        <!-- فورم ایمیل -->
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label text-white">ایمیل</label>
+                            <input type="email" class="form-control bg-light" name="email" id="exampleFormControlInput1"
+                                placeholder="name@example.com" />
+                        </div>
+                        <!-- فورم متن -->
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label text-white">متن پیام</label>
+                            <textarea class="form-control" name = "message" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <!-- دکمه ارسال -->
+                        <button class="btn btn-outline-info" type="submit">
+                            ارسال پیام
+                        </button>
+                    </form>
+                    {% for message in messages %}
+                    <div class="container-fluid p-0">
+                    <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+                        {{ message }}
+                    </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col-md-6 col-lg-5 offset-lg-1">
+                    <!-- تصویر -->
+                    <img src="{% static 'pictures/mention-14.png' %}" alt="" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end section 3 -->
+
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <!-- bootstrap javaScript -->
+
+{% endblock %}
