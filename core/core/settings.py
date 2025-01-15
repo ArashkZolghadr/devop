@@ -97,12 +97,13 @@ if DEBUG:
     }
 else:
     DATABASES = {
-    "default": {
-        "ENGINE": config('DB_ENGINE', default="django.db.backends.postgresql"),
-        "OPTIONS": {
-            "service": "my_service",
-            "passfile": ".my_pgpass",
-            },
+        "default": {
+            "ENGINE": config('DB_ENGINE', default="django.db.backends.postgresql"), 
+            "NAME": config('NAME',default="postgres"),
+            "USER": config('USER',default="postgres"),
+            "PASSWORD": config('PASSWORD',default="postgres"),
+            "HOST": config('HOST',default="127.0.0.1"),
+            "POST": config('PORT',default=5432),
         }
     }
 
